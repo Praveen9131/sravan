@@ -1,0 +1,112 @@
+{
+  "id": "8e90b485-4bb4-48c5-bd56-03c40e90c6b0",
+  "slug": "apex-saas-framework",
+  "meta": {
+    "title": "Apex SaaS Framework",
+    "category": "Automation",
+    "readTime": "5 min read",
+    "date": "Dec 2025",
+    "tags": [
+      "FastAPI",
+      "SaaS",
+      "Boilerplate",
+      "Multi-tenant",
+      "Python"
+    ],
+    "type": "Technical Deep Dive"
+  },
+  "hero": {
+    "excerpt": "Build production-ready SaaS applications in minutes, not months.",
+    "subtitle": "A modern FastAPI framework for building multi-tenant SaaS applications with enterprise-grade features out of the box.",
+    "coverImage": "/case-studies/apex-saas-framework/images/hero.png"
+  },
+  "author": {
+    "name": "Apex Neural Team",
+    "role": "Core Engineering",
+    "company": "Apex Neural",
+    "bio": "Building the next generation of AI-native development tools.",
+    "image": "",
+    "stats": {
+      "projects": "15+",
+      "experience": "10+ Years"
+    }
+  },
+  "content": {
+    "overview": {
+      "text": "Apex SaaS Framework is a comprehensive FastAPI boilerplate designed to eliminate the repetitive setup work required for modern SaaS applications. It provides a robust foundation with pre-configured authentication, multi-tenancy, and payment integration, allowing developers to focus purely on business logic.",
+      "stats": [
+        {
+          "label": "Setup Time",
+          "value": "< 2 min"
+        },
+        {
+          "label": "Boilerplate Reduction",
+          "value": "90%"
+        },
+        {
+          "label": "Test Coverage",
+          "value": "100%"
+        }
+      ]
+    },
+    "architecture": {
+      "description": "The framework follows a strict Clean Architecture pattern, ensuring separation of concerns and long-term maintainability. It leverages FastAPI for the interface layer, SQLAlchemy 2.0 for the persistence layer, and a domain-centric core that isolates business rules from external frameworks.",
+      "diagramUrl": "/case-studies/apex-saas-framework/images/architecture.png",
+      "diagramCaption": "Apex SaaS Framework - Clean Architecture Overview",
+      "components": [
+        {
+          "name": "API Layer",
+          "desc": "FastAPI routers and Pydantic schemas handling HTTP requests."
+        },
+        {
+          "name": "Domain Layer",
+          "desc": "Pure Python business logic, services, and repository interfaces."
+        },
+        {
+          "name": "Infrastructure",
+          "desc": "Concrete implementations for Database, Email, and Storage adapters."
+        },
+        {
+          "name": "Core Security",
+          "desc": "Centralized authentication, RBAC, and configuration management."
+        }
+      ]
+    },
+    "implementation": {
+      "codeSnippet": {
+        "language": "python",
+        "code": "from apex import Apex\n\n# Initialize your production-ready SaaS app in 2 lines\napp = Apex().app\n\n# Includes:\n# - Auth (JWT, OAuth2)\n# - Multi-tenancy\n# - RBAC\n# - Stripe/PayPal integration"
+      },
+      "proTip": {
+        "title": "Extensibility First",
+        "text": "Apex allows you to extend base models using standard SQLAlchemy inheritance. Simply subclass User or Organization to add custom fields without touching the core framework code."
+      }
+    },
+    "workflow": {
+      "description": "The developer workflow is streamlined for speed. Starting with a single command, developers get a fully functional backend. The framework handles the complexities of tenant isolation and user management automatically via dependency injection.",
+      "image": "/case-studies/apex-saas-framework/images/workflow.png",
+      "caption": "From Initialization to Production Deployment"
+    },
+    "results": {
+      "testimonial": {
+        "quote": "Apex allowed us to ship our MVP in two weeks instead of three months. The architecture is rock solid.",
+        "author": "Sarah Chen",
+        "role": "CTO, FinFlow"
+      },
+      "outcomes": [
+        {
+          "title": "Rapid Development",
+          "desc": "Launch complete SaaS backends with auth and payments in minutes."
+        },
+        {
+          "title": "Enterprise Ready",
+          "desc": "Built-in RBAC and multi-tenancy support complex organizational structures."
+        },
+        {
+          "title": "Maintainable",
+          "desc": "Clean Architecture prevents codebase spaghetti as the application grows."
+        }
+      ]
+    }
+  }
+}

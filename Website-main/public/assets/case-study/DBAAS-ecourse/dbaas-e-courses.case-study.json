@@ -1,0 +1,92 @@
+{
+  "id": "dbaas-e-courses-001",
+  "slug": "dbaas-e-courses",
+  "meta": {
+    "title": "DBaaS E-Courses: Scaling Education with AI",
+    "category": "Automation",
+    "readTime": "5 min read",
+    "date": "Dec 2024",
+    "tags": ["EdTech", "AI", "Automation", "DBaaS"],
+    "type": "Overview"
+  },
+  "hero": {
+    "excerpt": "Transforming technical documentation into structured, multi-modal learning experiences.",
+    "subtitle": "How Apex Neural automated the creation of DBaaS training for founders.",
+    "coverImage": "/case-studies/dbaas-e-courses/images/hero.png"
+  },
+  "author": {
+    "name": "Apex Neural Team",
+    "role": "Education & Platform Engineering",
+    "company": "Apex Neural",
+    "bio": "Engineers and educators building the next generation of knowledge tools.",
+    "image": "",
+    "stats": {
+      "projects": "12+",
+      "experience": "5+ Years"
+    }
+  },
+  "content": {
+    "overview": {
+      "text": "DBaaS E-Courses bridge the gap between complex platforms and user mastery. We built a system that autonomously generates structured learning paths, converting raw documentation into valid Google Slides presentations, neural audio lectures, and interactive quizzes. This ensures that every founder and builder on the DBaaS platform has access to high-quality, up-to-date education.",
+      "stats": [
+        { "label": "Skill Coverage", "value": "Idea to Launch" },
+        { "label": "Learning Level", "value": "Beginner to Advanced" },
+        { "label": "Hands-On Focus", "value": "High" }
+      ]
+    },
+    "architecture": {
+      "description": "The solution orchestrates a pipeline of AI services. A FastAPI backend manages the course lifecycle, interfacing with OpenAI for content generation and Piper TTS for audio. The frontend provides a seamless creation wizard, while the Google Slides API handles the visual rendering of educational material.",
+      "diagramUrl": "/case-studies/dbaas-e-courses/images/architecture.png",
+      "diagramCaption": "Microservices architecture integrating LLMs, TTS, and Google Workspace.",
+      "components": [
+        {
+          "name": "FastAPI backend",
+          "desc": "Manages the course lifecycle and orchestrates the pipeline of AI services"
+        },
+        {
+          "name": "Frontend application",
+          "desc": "Provides a seamless creation wizard for course generation"
+        },
+        {
+          "name": "LLM content generation",
+          "desc": "Generates structured course content and lesson scripts using OpenAI GPT-4o"
+        },
+        {
+          "name": "Text-to-speech service",
+          "desc": "Converts lesson scripts into neural audio lectures using Piper TTS"
+        },
+        {
+          "name": "Slides rendering service",
+          "desc": "Handles the visual rendering of educational material using Google Slides API"
+        }
+      ]
+    },
+    "implementation": {
+      "codeSnippet": {
+        "language": "python",
+        "code": "def generate_complete_course(topic: str, audience: str, length_minutes: int) -> Dict[str, Any]:\n    \"\"\"Generate complete course content with all lesson scripts in a single LLM call.\"\"\"\n    prompt = f\"\"\"\n    Create a complete, ready-to-teach course for {audience}.\n    Topic: {topic}\n    Length: {length_minutes} min\n    \n    Requirements:\n    1. 2-5 modules with clear difficulty progression (foundation -> advanced)\n    2. Complete lesson scripts (conversational, practical)\n    3. 3-5 learning outcomes per module\n    4. Valid JSON output only\n    \"\"\"\n    \n    response = client.chat.completions.create(\n        model=\"openai/gpt-4o\",\n        messages=[{\"role\": \"system\", \"content\": \"You are a master instructional designer.\"}, \n                  {\"role\": \"user\", \"content\": prompt}],\n        response_format={\"type\": \"json_object\"}\n    )\n    return json.loads(response.choices[0].message.content)"
+      },
+      "proTip": {
+        "title": "Context-Aware Generation",
+        "text": "Injecting 'Additional Knowledge' into the LLM context ensures that generated courses aren't just generic overviews but include specific, proprietary insights relevant to the DBaaS ecosystem."
+      }
+    },
+    "workflow": {
+      "description": "The user journey transforms intent into asset: 1. User defines topic and audience. 2. AI drafts a structured blueprint. 3. Content is expanded into detailed scripts. 4. Slides and Audio are generated in parallel. 5. The final course is packaged for LMS or Video distribution.",
+      "image": "/case-studies/dbaas-e-courses/images/workflow.png",
+      "caption": "End-to-end automation from concept to course."
+    },
+    "results": {
+      "testimonial": {
+        "quote": "What takes weeks of manual work now happens in minutes. From course design to final video export, we automate the entire process.",
+        "author": "Apex Neural Team",
+        "role": "Platform Capability"
+      },
+      "outcomes": [
+        { "title": "Accelerated Production", "desc": "Reduced course creation time significantly." },
+        { "title": "Consistent Quality", "desc": "Standardized educational structure across all topics." },
+        { "title": "Multi-Modal Delivery", "desc": "Automatic generation of slides, audio, and text." }
+      ]
+    }
+  }
+}

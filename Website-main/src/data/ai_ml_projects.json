@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Sports Analytics Platform",
+		"category": "Vision AI",
+		"description": "Real-time video intelligence for performance tracking and decision support.",
+		"tech": ["Computer Vision", "Edge", "MLOps"]
+	},
+	{
+		"title": "ChampionGen",
+		"category": "Generative AI",
+		"description": "Strategy generation and simulation workflows for competitive environments.",
+		"tech": ["LLMs", "RAG", "Evaluation"]
+	},
+	{
+		"title": "Enterprise RAG + Observability",
+		"category": "Agentic AI",
+		"description": "Retrieval-augmented systems with tracing, monitoring, and governance.",
+		"tech": ["RAG", "Tracing", "Guardrails"]
+	},
+	{
+		"title": "Hiring Automation",
+		"category": "No/Low Code",
+		"description": "Workflow automation for screening, scheduling, and candidate ops.",
+		"tech": ["n8n", "Integrations", "Automation"]
+	},
+	{
+		"title": "Digital Engineering Modernization",
+		"category": "Digital Engineering",
+		"description": "Microservices refactor, CI/CD hardening, and performance optimization.",
+		"tech": ["Cloud", "DevOps", "Microservices"]
+	},
+	{
+		"title": "AI Media Studio",
+		"category": "Media",
+		"description": "AI-assisted video workflows for editing, metadata, and distribution.",
+		"tech": ["Vision", "Pipelines", "Automation"]
+	}
+]
