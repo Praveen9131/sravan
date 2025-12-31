@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/industries"
+                  to="/about-us"
                   className="hover:text-[#780606] dark:hover:text-teal-400 transition-colors inline-block"
                 >
                   Industries

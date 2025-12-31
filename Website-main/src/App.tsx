@@ -1,6 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
-import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'

@@ -1,20 +1,7 @@
 import React, { useEffect, useRef } from 'react'
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import { motion, useMotionValue } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { FaPaperPlane, FaBell, FaLightbulb, FaArrowRight } from 'react-icons/fa'
-import {
-  SiReact,
-  SiNestjs,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-  SiNodedotjs,
-  SiFlask,
-  SiFlutter,
-  SiDocker,
-  SiAmazonaws,
-  SiSalesforce,
-} from 'react-icons/si'
+import { FaBell, FaLightbulb, FaArrowRight } from 'react-icons/fa'
 import { HiCog6Tooth, HiCube, HiBriefcase, HiSpeakerWave } from 'react-icons/hi2'
 import Marquee from '../../components/Marquee/Marquee'
 import FAQCTASection from '../../components/ui/faq-cta-section'
@@ -249,21 +236,6 @@ const Home: React.FC = () => {
     { name: 'cogninode technologies', icon: '/cogninode.jpg' },
   ]
 
-  // Logo images for circular gallery - using skillicons.dev for reliable loading
-  const galleryItems = [
-    { image: 'https://skillicons.dev/icons?i=linux', text: 'Linux' },
-    { image: 'https://skillicons.dev/icons?i=bash', text: 'Bash' },
-    { image: 'https://skillicons.dev/icons?i=python', text: 'Python' },
-    { image: 'https://skillicons.dev/icons?i=aws', text: 'AWS Security' },
-    { image: 'https://skillicons.dev/icons?i=docker', text: 'Docker' },
-    { image: 'https://skillicons.dev/icons?i=kubernetes', text: 'Kubernetes' },
-    { image: 'https://skillicons.dev/icons?i=github', text: 'GitHub' },
-    { image: 'https://skillicons.dev/icons?i=azure', text: 'Azure' },
-    { image: 'https://skillicons.dev/icons?i=git', text: 'Git' },
-    { image: 'https://skillicons.dev/icons?i=postgresql', text: 'PostgreSQL' },
-    { image: 'https://skillicons.dev/icons?i=redis', text: 'Redis' },
-    { image: 'https://skillicons.dev/icons?i=nginx', text: 'Nginx' },
-  ]
 
   return (
     <div className="min-h-screen">
@@ -315,7 +287,7 @@ const Home: React.FC = () => {
                     Get Security Assessment
                   </motion.button>
                 </Link>
-                <Link to="/case-study">
+                <Link to="/about-us">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -347,9 +319,7 @@ const Home: React.FC = () => {
                     key={`hero-${brand.name}`}
                     className="flex items-center gap-3 px-5 py-2 text-xs tracking-[0.5em] uppercase text-gray-600 dark:text-white/60"
                   >
-                    {brand.Icon ? (
-                      <brand.Icon className="w-5 h-5 text-gray-600 dark:text-white/60 flex-shrink-0" />
-                    ) : brand.icon ? (
+                    {brand.icon ? (
                       <img
                         src={brand.icon}
                         alt={brand.name}

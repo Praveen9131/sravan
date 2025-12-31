@@ -1,0 +1,112 @@
+{
+  "id": "e4a7d8c1-9b2f-4a3e-8c5d-1f2e3a4b5c6d",
+  "slug": "dbaas-platform",
+  "meta": {
+    "title": "DBaaS Platform",
+    "category": "Automation",
+    "readTime": "6 min read",
+    "date": "Dec 2025",
+    "tags": [
+      "React",
+      "AI",
+      "Market Research",
+      "Generative UI",
+      "SaaS"
+    ],
+    "type": "Product Story"
+  },
+  "hero": {
+    "excerpt": "Launch your digital business with AI-assisted market research and instant landing page generation.",
+    "subtitle": "A comprehensive platform that guides users from market discovery to high-fidelity landing page deployment in minutes.",
+    "coverImage": "/case-studies/dbaas-platform/images/hero.png"
+  },
+  "author": {
+    "name": "Apex Neural Team",
+    "role": "Product Engineering",
+    "company": "Apex Neural",
+    "bio": "Building the next generation of AI-native development tools.",
+    "image": "",
+    "stats": {
+      "projects": "20+",
+      "experience": "12+ Years"
+    }
+  },
+  "content": {
+    "overview": {
+      "text": "DBaaS (Digital Business as a Service) is a platform that provides access to sophisticated market research and web development. By combining Reddit signal mining, AI-driven pain point analysis, and generative UI, it allows entrepreneurs to validate ideas and launch professional landing pages without writing a single line of code.",
+      "stats": [
+        {
+          "label": "Idea Validation Speed",
+          "value": "Minutes"
+        },
+        {
+          "label": "Workflow Automation",
+          "value": "End-to-end"
+        },
+        {
+          "label": "User Guidance Level",
+          "value": "High"
+        }
+      ]
+    },
+    "architecture": {
+      "description": "The platform is built on a modern stack featuring a React 18 + Vite frontend and a microservices backend. Key architectural highlights include global state management via Zustand, resilient API handling with extensive fallback strategies, and a containerized deployment pipeline using Docker.",
+      "diagramUrl": "/case-studies/dbaas-platform/images/architecture.png",
+      "diagramCaption": "DBaaS Platform - Full Stack Overview",
+      "components": [
+        {
+          "name": "Frontend Core",
+          "desc": "React 18, Vite, Tailwind CSS, and shadcn/ui for a responsive, accessible interface."
+        },
+        {
+          "name": "AI Services",
+          "desc": "Dedicated services for market analysis, Reddit scraping, and landing page synthesis."
+        },
+        {
+          "name": "State Management",
+          "desc": "Zustand stores and React Query for seamless server-state synchronization."
+        },
+        {
+          "name": "Infrastructure",
+          "desc": "Dockerized containers orchestrated for scalability and rapid deployment."
+        }
+      ]
+    },
+    "implementation": {
+      "codeSnippet": {
+        "language": "typescript",
+        "code": "// Resilient API Client with Interceptors\nimport axios from 'axios';\n\nexport const api = axios.create({\n  baseURL: import.meta.env.VITE_API_BASE_URL,\n  timeout: 10000,\n});\n\napi.interceptors.response.use(\n  (response) => response,\n  async (error) => {\n    // Smart fallback to mock data if API fails\n    if (shouldUseMock(error)) {\n      return getMockData(error.config.url);\n    }\n    return Promise.reject(error);\n  }\n);"
+      },
+      "proTip": {
+        "title": "Graceful Degradation",
+        "text": "The frontend implements a sophisticated mock-fallback system. If backend services (like AI analysis) are temporarily unavailable, the UI seamlessly switches to high-fidelity mock data, ensuring the user journey is never interrupted."
+      }
+    },
+    "workflow": {
+      "description": "The user journey is designed as a guided funnel. It begins with broad topic discovery, narrows down to specific market signals, validates opportunities through AI analysis, and culminates in the automated generation of a conversion-optimized landing page.",
+      "image": "/case-studies/dbaas-platform/images/workflow.png",
+      "caption": "From Concept to Conversion: The DBaaS User Flow"
+    },
+    "results": {
+      "testimonial": {
+        "quote": "DBaaS transformed our idea validation process. We went from a rough concept to a live landing page with real customer signals in under an hour.",
+        "author": "James Miller",
+        "role": "Founder, TechStart"
+      },
+      "outcomes": [
+        {
+          "title": "Accelerated Validation",
+          "desc": "Reduced time-to-market for new business ideas by 90%."
+        },
+        {
+          "title": "High Fidelity",
+          "desc": "Generated landing pages match the quality of hand-coded professional templates."
+        },
+        {
+          "title": "Data-Driven",
+          "desc": "Decisions are backed by real-time social signals and AI analysis."
+        }
+      ]
+    }
+  }
+}

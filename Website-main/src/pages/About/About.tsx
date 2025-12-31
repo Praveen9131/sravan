@@ -579,7 +579,7 @@ const About: React.FC = () => {
             className="mb-8"
           >
             <Link
-              to="/talent-ecosystem"
+              to="/contact"
               className="inline-flex items-center gap-2 text-[#780606] dark:text-[#ff6b6b] hover:text-[#5c0404] dark:hover:text-[#ff8888] font-semibold transition-colors"
             >
               <span>←</span> Back to Talent Ecosystem
